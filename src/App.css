@@ -1,0 +1,274 @@
+.App {
+  text-align: center;
+  background-color: #fff;
+}
+.App *{
+  box-sizing: border-box;
+}
+.App-logo {
+   height: 90px;
+    width: 140px;
+    margin: auto;
+}
+
+.App-header {
+  background-color: #222;
+  height: 100px;
+  padding: 10px;
+  color: white;
+  position: relative;
+}
+
+.App-title {
+    text-align: left;
+    font-size: 40px;
+    font-weight: 600;
+    color: #e4ba4e;
+    padding: 10px 0;
+    font-family: cursive;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+.route-container{
+  width: 100%;
+}
+.logout-btn{
+    float: right;
+    height: 23px;
+    width: 100px;
+    background: white;
+    border: 0;
+        position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+/*home page and aboutus page */
+
+.home-page-content,.aboutus-page-content{
+    font-size: 20px;
+    line-height: 2.1;
+    text-align: justify;
+    width: 58%;
+    margin:auto;
+}
+.home-img-cont, .aboutus-img-cont {
+    height: 400px;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.home-page-content .page-heading,.aboutus-page-content .page-heading{
+  padding: 40px 0 10px;
+    font-size: 35px;
+}
+
+/*login page style*/
+.login-container{
+width: 30%;
+    margin: 100px auto auto auto;
+    border: 1px solid #b4b4b4;
+    padding: 40px 0;
+    border-radius: 6px;
+    min-width: 500px;
+    max-width: 510px;
+}
+
+.login-container input{
+      border: 1px solid lightgray;
+    height: 45px;
+    width: 80%;
+    border-radius: 6px;
+    font-size: 18px;
+    padding-left:15px;
+}
+
+.login-container button{
+    background-color: #99cc00;
+    height: 50px;
+    width: 80%;
+    border-radius: 5px;
+    border: 0;
+    font-size: 18px;
+    color: white;
+}
+
+/*restaurent gellery page style*/
+.movie-list-section{
+  background-color: #f2f2f2;
+}
+.movie-list-heading {
+    font-size: 30px;
+    text-align: left;
+    font-weight: bold;
+    color: #393838;
+    padding: 10px 0 10px 0;
+    line-height: 1;
+    padding: 25px 0 10px 10px;
+}
+.movielist-item{
+    min-height: 150px;
+    background: white;
+    color: black;
+    margin: 10px;
+    height: auto;
+    box-shadow: 5px 3px 13px -2px lightgrey;
+}
+.movielist-item:hover *{
+    text-decoration: none;
+}
+.item-heading {
+    background: #333333;
+    color: #e4ba4e;
+    padding: 10px 10px;
+    font-size: 28px;
+    text-align: left;
+    height: 110px;
+}
+
+.subsec1 {
+    font-size: 16px;
+    color: #999;
+    text-align: left;
+    line-height: 1.1;
+    display: -webkit-box;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    padding: 0 !important;
+}
+
+.subsec-cont {
+    height: 40px;
+    padding: 10px;
+}
+
+.subsec2 {
+    font-size: 16px;
+    color: #999;
+    text-align: left;
+    line-height: 1;
+}
+
+.subsec3 {
+    font-size: 20px;
+    color: #990000;
+    text-align: right;
+    line-height: 0.9;
+    font-weight: bold;
+}
+
+/*common style*/
+.resetPadding{
+  padding:0 !important;
+}
+
+.resetMargin {
+    margin: 0 !important;
+}
+.img-basic{
+  height: 100%;
+  width:100%;
+}
+.page-container-full{
+  width: 100%;
+  padding:0;
+  margin:0;
+}
+.page-container-mid{
+  width: 60%;
+  padding:0;
+  margin:auto;
+}
+/*loading symbol style*/
+.loading-model-cont {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    left: 0;
+    top: 0;
+    background-color: rgb(20, 21, 11,0.3);
+}
+
+.loading-symb-cont {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.loading-symbol {
+    height: 100px;
+    width: 100px;
+    animation:loading-symb-spin 3s linear infinite;
+}
+
+.loading-symbol img {
+    height: 100%;
+    width: 100%;
+}
+
+@keyframes loading-symb-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+
+/*movie detail page style*/
+
+.movie-detail-container {
+    margin: 20px;
+    border: 1px solid lightgray;
+    background-color: #f2f2f2;
+}
+
+.movie-detail-container .head-section {
+    background-color: #262626;
+    color: #e6e6e6;
+    padding: 20px 0;
+}
+
+.movie-detail-container .head-section .movie-name {
+    font-size: 40px;
+    text-align: left;
+    font-family: fantasy;
+    line-height: 1.5;
+    letter-spacing: 2px;
+}
+
+.movie-detail-container .head-section .rating {
+    font-size: 37px;
+    text-align: right;
+    color: #cc4400;
+}
+
+.movie-detail-container .head-section .gener {
+    text-align: left;
+    font-size: 16px;
+}
+
+.movie-detail-container .movie-img-section {
+    height: 370px;
+}
+
+.movie-detail-container .movie-img-section img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.movie-detail-container .detail-section{
+    padding: 10px 10px 20px 10px;
+}
+
+.movie-detail-container .detail-section .item{
+    padding:10px 0;
+    text-align:justify;
+}

@@ -1,0 +1,20 @@
+.menubar-container {
+    background-color:lightgray;
+}
+.menubar-container ul{
+   margin:0;
+   text-align:left;	
+}
+.menubar-container ul li {
+   display:inline-block;
+   padding:10px 20px;
+   font-size:20px;
+   min-width:150px;
+}
+
+.menubar-container ul li a {
+    text-decoration: none;
+    color: #990000;
+    font-size: 17px;
+    font-weight: bold;
+}
