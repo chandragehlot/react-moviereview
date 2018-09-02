@@ -48,7 +48,7 @@ class SignUpPage extends React.Component{
 					    <input type="password" className="form-control mt-1"  name="password" autoComplete="off" id="Password" placeholder="Enter Password" onBlur={this.handleOnChange} />
 					    <div>{ Err.password && <div className="alert alert-danger" role="alert">{ Err.errorMsg.password }</div>} </div>
 					</div>					
-					<button type="submit" className="btn btn-info btn-block btn-lg mt-4">Submit</button>
+					<button type="submit" className="btn btn-info btn-block btn-lg mt-4">Sign Up</button>
 				</form>
 				</div>
 			</div>

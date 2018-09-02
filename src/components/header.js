@@ -19,12 +19,12 @@ class Header extends React.Component{
 				<header className="App-header">
 					
 						<div className="row">
-							<div className="col-2">
+							<div className="col-1">
 								<div className="App-logo"> 
 									<img className="img-basic" src={require("../images/app-icon.png")} alt="logo"/>
 								</div>
 							</div>
-							<div className="col-8"><h1 className="App-title">CINEMA GALIYARA</h1> </div>
+							<div className="col-9"><h1 className="App-title">CINEMA GALIYARA</h1> </div>
 							<div className="col-2">
 								{(loginService.isAuthenicated)?<button type="button" className="logout-btn" onClick={this.HandleLogout} name="logout"> Logout </button>:<div></div>}
 							</div>

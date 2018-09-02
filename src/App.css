@@ -25,7 +25,8 @@
     font-weight: 600;
     color: #e4ba4e;
     padding: 10px 0;
-    font-family: cursive;
+    font-family: sans-serif;
+    padding-left: 4%;
 }
 
 .App-intro {

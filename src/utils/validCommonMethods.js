@@ -1,17 +1,33 @@
 import axios from 'axios';
 import urlConfig from './urlconfig.js';
 
+//Checking for validation
+// if valid then return true
+//if invalid then return false
+
 export const validationMethodHash = {
 		Required : (item,)=>{
-			return (!item && item.length === 0)? true : false;
+			if(!item && item.length === 0){
+				return false;
+			}else{
+				return true;
+			}
 		},
 		email : (item,)=>{
 			const regx = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-			return (!regx.test(item))? true : false;
+			if(regx.test(item)){
+				return true;
+			}else{
+				return false;
+			}
 		},
 		digits : (item,) =>{
 			const regx = /^\d+$/;
-			return (!regx.test(item))? true : false;
+			if(regx.test(item)){
+				return true
+			}else{
+				return false
+			}
 		},
 		async : (item, asyncurl)=>{
 			var resData = axios({
@@ -20,5 +36,8 @@ export const validationMethodHash = {
 				headers:[]
 			})
 			return resData;
+		},
+		default : (item,)=>{
+			return true;
 		}
 	}
