@@ -91,7 +91,7 @@ class MovieItemViewPage extends React.Component {
 		)
 	}
 	render(){		
-		const {moviedetial, loadingstatus ,errmsg} = this.props
+		const {moviedetial, loadingstatus } = this.props
 
 		return(
 			<div className="moviedetail-page page-container-mid">

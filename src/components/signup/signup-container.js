@@ -1,4 +1,3 @@
-import React from 'react';
 import {connect} from 'react-redux';
 import SignUpPage  from './signup-page.js';
 import { updateSignUpField } from '../../actions/action_signinup.js';

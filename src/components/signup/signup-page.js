@@ -4,10 +4,6 @@ import { SignUpFormConfig } from './signup-form-config.js';
 
 
 class SignUpPage extends React.Component{
-	constructor(){
-		super();
-	}
-
 	handleFormSubmit = (e)=>{
 		e.preventDefault();
 		alert(new FormData(e.target.data));
