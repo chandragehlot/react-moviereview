@@ -68,7 +68,7 @@ app.get('/cinemagallery/checkusername/duplicate/:username',(req,res,next)=>{
 
       var JsonParsedData = JSON.parse(filebinarydata);
       var userExistFlag = JsonParsedData.find((userdetail,index)=>{
-          return userdetail['user_name'] === req.params.username
+          return userdetail['userid'] === req.params.username
       });
       
       var responseData;

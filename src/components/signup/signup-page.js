@@ -27,13 +27,22 @@ class SignUpPage extends React.Component{
 				<form onSubmit={this.handleFormSubmit}>
 					<div className="form-group text-left">
 						<label className="font-weight-bold">Name</label>
-					    <input type="text" className="form-control mt-1" name="username" id="Username" placeholder="Enter Username" autoComplete="off" onBlur={this.handleOnChange}/>
-					    <div>{ Err.username && 
+					    <input type="text" className="form-control mt-1" name="name" id="Name" placeholder="Enter Your Name" autoComplete="off" onBlur={this.handleOnChange}/>
+					    <div>{ Err.name && 
 							(<div className="alert alert-danger" role="alert">
-								{Err.errorMsg.username}
+								{Err.errorMsg.name}
 							</div>)}
 						</div>
 					</div>
+					<div className="form-group text-left">
+						<label className="font-weight-bold">User ID</label>
+					    <input type="text" className="form-control mt-1" name="userid" id="Userid" placeholder="Enter User ID" autoComplete="off" onBlur={this.handleOnChange}/>
+					    <div>{ Err.userid && 
+							(<div className="alert alert-danger" role="alert">
+								{Err.errorMsg.userid}
+							</div>)}
+						</div>
+					</div>					
 					<div className="form-group text-left">
 						<label className="font-weight-bold">Email</label>
 					    <input type="email" className="form-control mt-1" name="email" id="Email" placeholder="Enter email" autoComplete="off" onBlur={this.handleOnChange.bind(this)}/>

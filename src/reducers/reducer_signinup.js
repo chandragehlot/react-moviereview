@@ -4,7 +4,8 @@ const initial_state = {
 		formvalid : true,
 		email : false,
 		password : false,
-		username: false,
+		name: false,
+		userid:false,
 		errorMsg : {
 				
 		}		

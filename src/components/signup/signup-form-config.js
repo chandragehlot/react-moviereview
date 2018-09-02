@@ -1,13 +1,19 @@
 export const SignUpFormConfig = {
 			email : [
-					{ validation : "Required", errmsg : "Email Required"},
+					{ validation : "require", errmsg : "Email Required"},
 					{ validation : "email", errmsg : "Email is not valid" }
 				],
-			username : [
-					{ validation: "Required", errmsg: "Username Required"},
-					{ validation : "async", errmsg: "Username already exist", url: 'checkUserNameDuplicate'}
+			name : [
+					{ validation: "require", errmsg: "Name Required"}
 				],
 			password : [
-					{validation:"Required",errmsg : "Password Required"}
+					{validation:"require",errmsg : "Password Required"}
+				],
+			userid : [
+					{validation : "require", errmsg: "User ID is Required" },
+					{ validation : "async", errmsg: "User ID already exist"}
 			]
 	};
+
+
+//url: 'checkUserNameDuplicate'

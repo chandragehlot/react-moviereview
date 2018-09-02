@@ -6,7 +6,7 @@ import urlConfig from './urlconfig.js';
 //if invalid then return false
 
 export const validationMethodHash = {
-		Required : (item,)=>{
+		require : (item,)=>{
 			if(!item && item.length === 0){
 				return false;
 			}else{
