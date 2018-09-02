@@ -14,7 +14,8 @@ export function executeValidation(name,value,methodArr,oldstate){
 				errorMsg :  {
 					[name] : msgArr[0]
 				},
-				[name] : isInValid
+				[name] : isInValid,
+				['formvalid'] : !isInValid
 			}
 			resolve(result);
 		
