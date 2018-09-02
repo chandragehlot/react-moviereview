@@ -8,7 +8,27 @@ export function executeValidation(name,value,methodArr,oldstate){
 	methodArrLenth = methodArr[name].length;
 
 	return new Promise((resolve,reject)=>{
-		methodArrItem = this.addDefaultToMethodArr(methodArrItem);
+
+		const returnResult = ()=>{
+			var result = {
+				errorMsg :  {
+					[name] : msgArr[0]
+				},
+				[name] : isInValid
+			}
+			resolve(result);
+		
+		};
+		const defaultresponse = ()=>{
+			isInValid = false;
+			returnResult();
+		};
+	
+		const addDefaultToMethodArr = (Arr)=>{
+			Arr.push({ validation : 'default', errmsg : ""});
+			return Arr;
+		}
+		methodArrItem = addDefaultToMethodArr(methodArrItem);
 
 		methodArrItem.find((fieldObj,index)=>{
 			if(fieldObj['validation'] === 'async'){
@@ -18,43 +38,23 @@ export function executeValidation(name,value,methodArr,oldstate){
 					if(userexist){
 						isInValid = userexist; 
 						msgArr.push(fieldObj['errmsg'])
-						this.returnResult();
+						returnResult();
 						return true;
 					}else{
-						this.defaultresponse()
+						defaultresponse()
 					}
 				})
 			}else{
 				if(!validationMethodHash[fieldObj['validation']](value)){
 					isInValid = true;
 					msgArr.push(fieldObj['errmsg']);
-					this.returnResult();
+					returnResult();
 					return true;
 				}
 				if(index === (methodArrLenth-1) && !asyncCalledflag){
-					this.defaultresponse()
+					defaultresponse()
 				} 				
 			}
 		});
-		
-		const returnResult = ()=>{
-				var result = {
-					errorMsg :  {
-						[name] : msgArr[0]
-					},
-					[name] : isInValid
-				}
-				resolve(result);
-			
-		};
-		const  defaultresponse = ()=>{
-			isInValid = false;
-			returnResult();
-		};
-
-		const addDefaultToMethodArr = (Arr)=>{
-			Arr.push({ validation : 'default', errmsg : ""});
-			return Arr;
-		}
 	});
 }
